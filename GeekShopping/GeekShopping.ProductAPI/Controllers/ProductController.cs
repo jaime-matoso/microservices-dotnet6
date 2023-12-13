@@ -12,7 +12,7 @@ namespace GeekShopping.ProductAPI.Controllers
         private readonly IProductRepository _repository;
         public ProductController(IProductRepository repository)
         {
-            repository = _repository ?? throw new ArgumentNullException(nameof(repository));
+            _repository = repository ?? throw new ArgumentNullException(nameof(repository));
         }
 
         [HttpGet]

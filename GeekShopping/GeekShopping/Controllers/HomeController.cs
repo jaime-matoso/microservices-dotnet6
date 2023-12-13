@@ -1,5 +1,7 @@
 ﻿using GeekShopping.Models;
+using GeekShopping.Web.Services.IServices;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System.Diagnostics;
 
 namespace GeekShopping.Controllers

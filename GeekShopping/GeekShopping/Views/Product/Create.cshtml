@@ -1,0 +1,48 @@
+﻿@model GeekShopping.Web.Models.ProductModel
+
+<form asp-action="Create">
+
+    <div class="container p-4 border">
+        <h3 class="text-primary">Create Product</h3>
+        <hr />
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+            <div class="m-1">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="m-1">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" class="form-control" rows="3"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="m-1">
+                <label asp-for="CategoryName" class="form-label"></label>
+                <input asp-for="CategoryName" class="form-control">
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+            <div class="m-1">
+                <label asp-for="Image_Url" class="form-label"></label>
+                <input asp-for="Image_Url" class="form-control">
+                <span asp-validation-for="Image_Url" class="text-danger"></span>
+            </div>
+            <div class="m-1">
+                <label asp-for="Price" class="form-label"></label>
+                <input asp-for="Price" class="form-control" style="width:200px;">
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="m-1">
+                <input type="submit" value="Create" class="btn btn-sm btn-outline-success" style="width:250px;" />
+                <a asp-action="Index" class="btn btn-sm btn-outline-primary" style="width:250px;">Back to List</a>
+            </div>
+        </div>
+
+
+    </div>
+</form>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

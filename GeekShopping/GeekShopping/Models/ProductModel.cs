@@ -1,20 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
 
-namespace GeekShopping.ProductAPI.Data.ValueObject
+namespace GeekShopping.Web.Models
 {
-    public class ProductVO
+    public class ProductModel
     {
         public long Id { get; set; }
 
         public string Name { get; set; }
-       
+
         public string Description { get; set; }
 
         public decimal Price { get; set; }
 
+        [DisplayName("Category")]
         public string CategoryName { get; set; }
-
+        
+        [DisplayName("Image Url")]
         public string Image_Url { get; set; }
     }
 }

@@ -1,0 +1,36 @@
+﻿@model GeekShopping.Web.Models.ProductModel
+
+<form asp-action="Delete">
+    <input asp-for="Id" type="hidden" />
+    <div class="container p-4 border">
+        <h3 class="text-primary">Delete Product</h3>
+        <hr />
+        <div class="row">
+            <div class="m-1">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" disabled class="form-control">
+            </div>
+            <div class="m-1">
+                <label asp-for="Description" class="form-label"></label>
+                <textarea asp-for="Description" disabled class="form-control" rows="3"></textarea>
+            </div>
+            <div class="m-1">
+                <label asp-for="CategoryName" class="form-label"></label>
+                <input asp-for="CategoryName" disabled class="form-control">
+            </div>
+            <div class="m-1">
+                <label asp-for="Image_Url" class="form-label"></label>
+                <input asp-for="Image_Url" disabled class="form-control">
+            </div>
+            <div class="m-1">
+                <label asp-for="Price" class="form-label"></label>
+                <input asp-for="Price" disabled class="form-control" style="width:200px;">
+            </div>
+
+            <div class="m-1">
+                <input type="submit" value="Delete" class="btn btn-sm btn-outline-success" style="width:250px;" />
+                <a asp-action="Index" class="btn btn-sm btn-outline-primary" style="width:250px;">Back to List</a>
+            </div>
+        </div>
+    </div>
+</form>
